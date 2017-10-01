@@ -7,7 +7,8 @@ import {
   HeaderComponent,
   DeviceThumbnailComponent } from './component';
 
-import { DeviceService } from './service'; 
+import { 
+  DeviceService } from './service'; 
 
 @NgModule({
   declarations: [

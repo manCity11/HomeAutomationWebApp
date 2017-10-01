@@ -10,14 +10,15 @@ export class DeviceService {
 
     getAllDevices() {
         return this.http
-            .get(`http://localhost:8000/graphql?query={devices{id, name, pinNumber, isOn}}`)
+            .get(`http://localhost:8000/graphql?query={devices{id,name,pinNumber,isOn}}`)
             .toPromise()
-            .then(response => response.json().data);
+            .then(response => response.json().data)
+            .catch(err => console.log('failed to load device list'));
     }
 
     getDevice(id: string) {
         return this.http
-        .get(`http://localhost:8000/graphql?query={device(id:${id}{id, name, pinNumber, isOn}}`)
+        .get(`http://localhost:8000/graphql?query={device(id:${id}{id,name,pinNumber,isOn}}`)
         .toPromise()
         .then(response => response.json().data);
     }
