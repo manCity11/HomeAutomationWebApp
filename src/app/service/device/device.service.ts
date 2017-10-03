@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class DeviceService {
-    
+
     constructor(private http: Http) { }
 
     getAllDevices() {

@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { 
-  HeaderComponent,
-  DeviceThumbnailComponent } from './component';
+import { HeaderComponent,
+         DeviceThumbnailComponent } from './component';
 
-import { 
-  DeviceService } from './service'; 
+import { DeviceService } from './service'; 
+
 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import {
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [
     DeviceService,
