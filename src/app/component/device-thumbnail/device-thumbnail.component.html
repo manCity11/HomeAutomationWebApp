@@ -3,12 +3,14 @@
         <div class="caption">
             <h3>{{device.name}}</h3>
             <p>
-                <a *ngIf="!device.name"
+                <a *ngIf="!device.isOn"
+                (click)="deviceOn(true)"
                     href="#"
                     class="btn btn-primary"
                     role="button">Switch On</a>
                 
-                <a *ngIf="device.name"
+                <a *ngIf="device.isOn"
+                    (click)="deviceOn(false)"
                     href="#"
                     class="btn btn-danger"
                     role="button">Switch Off</a>    

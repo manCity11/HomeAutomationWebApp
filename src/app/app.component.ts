@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
       .getAllDevices()
       .then(data => {
         this.deviceList = data.devices;
-        console.log(this.deviceList);
       });
   }
 }
