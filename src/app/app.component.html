@@ -1,4 +1,5 @@
 <si-header></si-header>
 <div class="row">
-    <si-device-thumbnail></si-device-thumbnail>
+    <si-device-thumbnail *ngFor='let device of deviceList' 
+                         [device]='device'></si-device-thumbnail>
 </div>
